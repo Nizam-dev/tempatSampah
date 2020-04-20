@@ -51,3 +51,40 @@ function draw() {
 
  }
 draw();
+
+
+//animasi sampah
+
+var rotation = 0;
+var dr = 0.04;
+function dra() {
+
+   // reset transforms before clearing
+   
+  context.clearRect(430, 100, 140,150);
+
+   context.save();
+   context.fillStyle = a;
+   context.fillRect(450,250,100,150);
+   context.translate(540, 250);
+   context.scale(1,-1);
+   requestAnimationFrame(dra);
+   context.rotate(rotation);
+   context.fillStyle = 'blue';
+   context.fillRect(0,0,10,90);
+   context.fillStyle = 'yellow';
+   context.fillRect(0,25,30,30);
+
+   context.restore();
+  
+  if(rotation >=1.6 || rotation < 0 ){
+      dr =- dr; 
+     }
+     rotation +=dr;
+
+
+}
+
+dra();
+
+ 
