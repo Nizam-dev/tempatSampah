@@ -1,0 +1,2 @@
+# tempatSampah
+Tugas Praktikum 
